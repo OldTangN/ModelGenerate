@@ -36,16 +36,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnConnect = new System.Windows.Forms.Button();
             this.txtPwd = new System.Windows.Forms.TextBox();
+            this.txtServer = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnCopy = new System.Windows.Forms.Button();
             this.txtTable = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtServer = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -85,7 +85,7 @@
             this.cmbTables.FormattingEnabled = true;
             this.cmbTables.Location = new System.Drawing.Point(89, 284);
             this.cmbTables.Name = "cmbTables";
-            this.cmbTables.Size = new System.Drawing.Size(132, 20);
+            this.cmbTables.Size = new System.Drawing.Size(197, 20);
             this.cmbTables.TabIndex = 8;
             // 
             // txtDB
@@ -98,7 +98,7 @@
             // 
             // btnBuild
             // 
-            this.btnBuild.Location = new System.Drawing.Point(255, 284);
+            this.btnBuild.Location = new System.Drawing.Point(211, 347);
             this.btnBuild.Name = "btnBuild";
             this.btnBuild.Size = new System.Drawing.Size(75, 23);
             this.btnBuild.TabIndex = 9;
@@ -133,6 +133,14 @@
             this.txtPwd.TabIndex = 4;
             this.txtPwd.Text = "123456";
             // 
+            // txtServer
+            // 
+            this.txtServer.Location = new System.Drawing.Point(77, 40);
+            this.txtServer.Name = "txtServer";
+            this.txtServer.Size = new System.Drawing.Size(132, 21);
+            this.txtServer.TabIndex = 3;
+            this.txtServer.Text = "127.0.0.1";
+            // 
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(79, 82);
@@ -149,6 +157,15 @@
             this.label3.Size = new System.Drawing.Size(53, 12);
             this.label3.TabIndex = 2;
             this.label3.Text = "数据库：";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 12);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "服务器：";
             // 
             // label2
             // 
@@ -189,7 +206,7 @@
             // 
             // btnCopy
             // 
-            this.btnCopy.Location = new System.Drawing.Point(46, 368);
+            this.btnCopy.Location = new System.Drawing.Point(55, 368);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(75, 23);
             this.btnCopy.TabIndex = 1;
@@ -202,25 +219,9 @@
             this.txtTable.Location = new System.Drawing.Point(16, 20);
             this.txtTable.Multiline = true;
             this.txtTable.Name = "txtTable";
+            this.txtTable.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtTable.Size = new System.Drawing.Size(324, 332);
             this.txtTable.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 40);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 12);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "服务器：";
-            // 
-            // txtServer
-            // 
-            this.txtServer.Location = new System.Drawing.Point(77, 40);
-            this.txtServer.Name = "txtServer";
-            this.txtServer.Size = new System.Drawing.Size(132, 21);
-            this.txtServer.TabIndex = 3;
-            this.txtServer.Text = "127.0.0.1";
             // 
             // frmModelBuilder
             // 

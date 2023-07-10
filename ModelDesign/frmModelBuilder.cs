@@ -25,7 +25,7 @@ namespace ModelDesign
             string DB = txtDB.Text.Trim();
             string SERVEr = txtServer.Text.Trim();
 
-            // mysqlhelper = new MySqlHelp(SERVEr, UID, UPWD, DB);
+             mysqlhelper = new MySqlHelp(SERVEr, UID, UPWD, DB);
 
             if (mysqlhelper.GetConnection() == null)
             {
@@ -38,7 +38,7 @@ namespace ModelDesign
             }
         }
 
-        private MySqlHelp mysqlhelper = new MySqlHelp("10.136.74.230", "root", "Haier@74230", "tbzdgx");
+        private MySqlHelp mysqlhelper;// = new MySqlHelp("10.136.74.230", "root", "Haier@74230", "tbzdgx");
 
         public DataTable GetTables()
         {
@@ -106,12 +106,18 @@ namespace ModelDesign
                         break;
                     case "bit":
                     case "tinyint":
-                    case "int":
-                    case "bigint":
+                    case "int":                  
                         conText += $"{t}private int {GetField(row["COLUMN_NAME"].ToString())};\r\n";//row[3]
+                        break;
+                    case "bigint":
+                        conText += $"{t}private long {GetField(row["COLUMN_NAME"].ToString())};\r\n";//row[3]
                         break;
                     case "datetime":
                         conText += $"{t}private DateTime {GetField(row["COLUMN_NAME"].ToString())};\r\n";//row[3]
+                        break;
+                    case "float":
+                    case "decimal":
+                        conText += $"{t}private float {GetField(row["COLUMN_NAME"].ToString())};\r\n";//row[3]
                         break;
                     default:
                         conText += $"{t}private string {GetField(row["COLUMN_NAME"].ToString())};\r\n";//row[3]
@@ -147,6 +153,10 @@ namespace ModelDesign
                         }
                     case "datetime":
                         conText += $"{t}public DateTime {row["COLUMN_NAME"].ToString()}\r\n";
+                        break;
+                    case "float":
+                    case "decimal":
+                        conText += $"{t}public float {row["COLUMN_NAME"].ToString()}\r\n";
                         break;
                     default:
                         conText += $"{t}public string {row["COLUMN_NAME"].ToString()}\r\n";
